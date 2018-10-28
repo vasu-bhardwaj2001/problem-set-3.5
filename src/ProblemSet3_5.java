@@ -2,10 +2,10 @@
  * INSTRUCTIONS.
  * 
  * The following exercises are, perhaps, more mathematically inclined than previous
- * problem sets. While they might be challenging, they are certainy doable.
+ * problem sets. While they might be challenging, they are certainly doable.
  * 
  * You can (and should!) solve each of them using only the operators, conditional control
- * structures, and iterative control strucurs we've covered. You are not permitted to use
+ * structures, and iterative control structures we've covered. You are not permitted to use
  * recursive code in your solutions.
  * 
  * Please be mindful of the expected outputs, as your code will be tested against that
@@ -16,21 +16,6 @@
 
 import java.util.Calendar;
 import java.util.Date;
-	/**
-	 * INSTRUCTIONS.
-	 * 
-	 * The following exercises are, perhaps, more mathematically inclined than previous
-	 * problem sets. While they might be challenging, they are certainly doable.
-	 * 
-	 * You can (and should!) solve each of them using only the operators, conditional control
-	 * structures, and iterative control structures we've covered. You are not permitted to use
-	 * recursive code in your solutions.
-	 * 
-	 * Please be mindful of the expected outputs, as your code will be tested against that
-	 * directly. If you're unsure, please ask for clarification.
-	 * 
-	 * This problem set is worth 25 points and is due no later than 11:59pm on October 28, 2018.
-	 */
 
 	public class ProblemSet3_5 {
 		
@@ -361,46 +346,46 @@ import java.util.Date;
 			x.setTime(today);
 			int i = x.get(Calendar.YEAR);
 			int counter = 0;
-						if (count == 1) {
-							while (counter < count ) { 
-								if((i % 4 == 0 && i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
-									System.out.print("The next leap year is " + i + ". ");
-							        counter++;
-								}
-								i++;
-							}
+				if (count == 1) {
+					while (counter < count ) { 
+						if((i % 4 == 0 && i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
+							System.out.print("The next leap year is " + i + ". ");
+					        counter++;
 						}
-						else if (count == 2) {
-							System.out.print("The next " + count + " leap years are ");
-							while (counter < count ) { 
-								if((i % 4 == 0 && i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
-									if (count >= counter + 2) {
-										System.out.print(i);
-									}
-									else if (count == counter + 1){
-										System.out.print(" and " + i + ".");
-									}
-							        counter++;
-								}
-								i++;
+						i++;
+					}
+				}
+				else if (count == 2) {
+					System.out.print("The next " + count + " leap years are ");
+					while (counter < count ) { 
+						if((i % 4 == 0 && i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
+							if (count >= counter + 2) {
+								System.out.print(i);
 							}
-						}
-						else{
-							System.out.print("The next " + count +" leap years are ");
-							int count2 = count - 1;
-							while (counter < count) { 
-								if((i % 4 == 0 && i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
-									if (count2 == counter) {
-										System.out.print("and " + i +".");
-									}
-									else {
-										 System.out.print(i + ", ");
-									}
-							        counter++;
-								}
-								i++;
+							else if (count == counter + 1){
+								System.out.print(" and " + i + ".");
 							}
+					        counter++;
 						}
+						i++;
+					}
+				}
+				else{
+					System.out.print("The next " + count +" leap years are ");
+					int count2 = count - 1;
+					while (counter < count) { 
+						if((i % 4 == 0 && i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
+							if (count2 == counter) {
+								System.out.print("and " + i +".");
+							}
+							else {
+								 System.out.print(i + ", ");
+							}
+					        counter++;
+						}
+						i++;
+					}
+				}
 
 			  }
 			System.out.println(" ");
